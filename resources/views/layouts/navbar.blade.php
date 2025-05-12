@@ -20,19 +20,19 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link text-black active fs-6" aria-current="page"
-                                    href="#">Accueil</a>
+                                    href="{{ route('accueil') }}">Accueil</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-black fs-6" href="{{ route('canape-fauteils') }}">Canapés et fauteils</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-black fs-6" href="#">Lits</a>
+                                <a class="nav-link text-black fs-6" href="{{ route('lits') }}">Lits</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-black fs-6" href="#">Tables à manger</a>
+                                <a class="nav-link text-black fs-6" href="{{ route('table-manger') }}">Tables à manger</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-black fs-6" href="#">Contact</a>
+                                <a class="nav-link text-black fs-6" href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
                         {{-- Buttons Connexion  --}}
