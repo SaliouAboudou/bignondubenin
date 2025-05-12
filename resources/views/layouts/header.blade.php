@@ -16,7 +16,7 @@
 
             <!-- Texte superposé centré -->
             <div class="position-absolute top-50 start-50 translate-middle text-white text-center w-100 px-3">
-                <h1 class="fw-bolder text-uppercase" style="font-size: 2.5rem;">Bienvenue à Bignon du Bénin</h1>
+                <h1 class="fw-bolder text-uppercase" style="font-size: 60px;">Bienvenue à Bignon du Bénin</h1>
             </div>
         </div>
 
