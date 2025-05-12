@@ -65,12 +65,15 @@
     <div class="container-fluid  py-2">
         <div class="row rounded py-3 d-flex justify-content-center">
             <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-3">
+                <img class="w-25" src="{{ asset('images/canape-lit.png') }}" alt="">
                 <a href="#">Canapé et fauteuil</a>
             </div>
             <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-3">
+                <img class="w-25" src="{{ asset('images/lit-double.png') }}" alt="">
                 <a href="#">Canapé et fauteuil</a>
             </div>
             <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-3">
+                <img class="w-25" src="{{ asset('images/plateau-repas.png') }}" alt="">
                 <a href="#">Canapé et fauteuil</a>
             </div>
         </div>
