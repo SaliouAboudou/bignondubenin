@@ -4,26 +4,30 @@
     <div class="container  py-2">
         <div class="row d-flex py-3 justify-content-center align-items-center position-relative">
             <div style="height: 10rem; overflow: hidden; width: 100%;" class="position-relative">
-                <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ asset('images/table_a_manger.avif') }}" alt="">
+                <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ asset('images/table_a_manger.avif') }}"
+                    alt="">
                 <!-- Texte superposé sur l'image -->
-                <h1 class="position-absolute top-50 start-50 translate-middle text-center text-white font-bold text-uppercase">Table à Manger</h1>
+                <h1
+                    class="position-absolute top-50 start-50 translate-middle text-center text-white font-bold text-uppercase">
+                    Table à Manger</h1>
             </div>
         </div>
 
-        <div class="row d-flex justify-content-end">
-            <div class="col-md-2 py-2 mx-3">
+        <div class="row d-flex justify-content-center justify-content-md-end">
+            <div class="col-12 col-md-3 py-2">
                 <form action="">
-                    <div class="row d-flex ">
-                        <label for="">Trier Par</label>
-                        <select class="form-select" name="" id="">
-                            <option value="">Faite un choix</option>
-                            <option value="">Prix (bas à élévé)</option>
-                            <option value="">Prix (élévé à bas)</option>
+                    <div class="row">
+                        <label for="trierPar" class="form-label">Trier Par</label>
+                        <select class="form-select" name="trier" id="trierPar">
+                            <option value="">Faites un choix</option>
+                            <option value="asc">Prix (bas à élevé)</option>
+                            <option value="desc">Prix (élevé à bas)</option>
                         </select>
                     </div>
                 </form>
             </div>
         </div>
+
 
         <div class="container-fluid  py-2">
             <div class="row bg-white rounded py-3">

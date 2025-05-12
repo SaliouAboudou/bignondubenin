@@ -10,20 +10,21 @@
             </div>
         </div>
 
-        <div class="row d-flex justify-content-end">
-            <div class="col-md-2 py-2 mx-3">
+        <div class="row d-flex justify-content-center justify-content-md-end">
+            <div class="col-12 col-md-3 py-2">
                 <form action="">
-                    <div class="row d-flex ">
-                        <label for="">Trier Par</label>
-                        <select class="form-select" name="" id="">
-                            <option value="">Faite un choix</option>
-                            <option value="">Prix (bas à élévé)</option>
-                            <option value="">Prix (élévé à bas)</option>
+                    <div class="row">
+                        <label for="trierPar" class="form-label">Trier Par</label>
+                        <select class="form-select" name="trier" id="trierPar">
+                            <option value="">Faites un choix</option>
+                            <option value="asc">Prix (bas à élevé)</option>
+                            <option value="desc">Prix (élevé à bas)</option>
                         </select>
                     </div>
                 </form>
             </div>
         </div>
+
 
         <div class="container-fluid  py-2">
             <div class="row bg-white rounded py-3">

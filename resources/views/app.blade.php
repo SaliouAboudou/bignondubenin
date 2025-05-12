@@ -30,7 +30,9 @@
 </head>
 
 <body>
+    {{-- Content   --}}
     @yield('content');
+    {{-- Footer  --}}
     @include('layouts.footer')
 
     <!-- bootstrap JS -->
