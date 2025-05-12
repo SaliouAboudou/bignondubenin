@@ -36,7 +36,7 @@
                             </li>
                         </ul>
                         {{-- Buttons Connexion  --}}
-                        <button class="btn btn-primary fs-6" type="submit">Connexion</button>
+                        <a class="btn btn-primary fs-6" href="{{ route('login') }}">Connexion</a>
                     </div>
                 </div>
             </nav>

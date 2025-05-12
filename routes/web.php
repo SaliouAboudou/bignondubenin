@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+
+// Route Login
+Route::get('/login', function () {
+    return view('pages.auths.login');
+})->name('login');
+
 // Route Accueil
 Route::get('/', function () {
     return view('pages.accueil');
