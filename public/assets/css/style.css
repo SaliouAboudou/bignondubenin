@@ -2,7 +2,12 @@
         .full-height-mobile {
             height: 100vh;
             object-fit: cover;
+            font-size: 30px;
         }
     }
+
+.custom-bg {
+  background-color: #2B6BAC;
+}
 
 

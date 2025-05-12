@@ -3,7 +3,7 @@
  {{-- HEADER  --}}
     @include('layouts.header')
 
-    <div class="container-fluid bg-primary py-2">
+    <div class="container-fluid custom-bg py-2">
         <div class="row bg-white rounded py-3">
             <div class="col-1"></div>
             <div class="col-10">

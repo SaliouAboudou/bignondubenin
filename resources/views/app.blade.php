@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
     {{-- Style css  --}}
-    <link rel="stylesheet" href="asset('assets/css/style.css')">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
