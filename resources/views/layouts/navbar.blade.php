@@ -1,7 +1,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
                 <div class="container-fluid">
                     {{-- LOGO  --}}
-                    <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                    <a class="navbar-brand d-flex align-items-center gap-3" href="{{ route('accueil')}}">
                         <!-- Image : toujours visible -->
                         <img class="w-25 " src="{{ asset('images/logo_bignon.png') }}" alt="Logo Bignon">
 
