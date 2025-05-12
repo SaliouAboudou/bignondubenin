@@ -14,8 +14,9 @@
 
                 <!-- Texte superposé -->
                 <div
-                    class="row col-4 textce-center position-absolute top-50 start-50 translate-middle text-white fw-bold fs-1 text-uppercase">
-                    <h1 class=" text-center fs-1 fw-bolder">Bienvenue à Bignon du benin</h1>
+                    class="row col-9 textce-center position-absolute top-50 start-50 translate-middle text-white fw-bold fs-1 text-uppercase">
+                    <h1 class="text-center fw-bolder" style="font-size: 80px;">Bienvenue à Bignon du Bénin</h1>
+
                 </div>
             </div>
             <div class="col-1"></div>
