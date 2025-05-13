@@ -1,3 +1,5 @@
+
+ // Ajouter un produit du panier
 $(document).ready(function () {
     let productCount = 0;
 
@@ -19,6 +21,9 @@ $(document).ready(function () {
         const price = $(this).data('price');
         const img = $(this).data('img');
         const button = $(this);
+        const quantiy = 1
+
+        const montant = quantiy * price;
 
         // Vérifie si le produit est déjà ajouté
         if (isProductAlreadyAdded(name)) {
@@ -35,18 +40,21 @@ $(document).ready(function () {
             <tr>
                 <td class="d-flex flex-column align-items-center">
                     <img style="width: 50px;" src="${img}" alt="${name}">
-                    <strong>${name}</strong>
-                    <input type="hidden" name="produits[][nom]" value="${name}">
-                    <input type="hidden" name="produits[][image]" value="${img}">
+                    <strong class="text-center" style=" font-size: 12px">${name}</strong>
+                    <input type="hidden" style=" font-size: 12px" name="produits[][nom]" value="${name}">
+                    <input type="hidden" style=" font-size: 12px" name="produits[][image]" value="${img}">
                 </td>
                 <td>
-                    <input type="number" name="produits[][quantite]" value="1" class="form-control form-control-sm w-75 mx-auto" min="1">
+                    <input type="number" style=" font-size: 12px" name="produits[][quantite]" value="${quantiy}" class="form-control form-control-sm w-75 mx-auto" min="1">
                 </td>
                 <td>
-                    <input type="text" name="produits[][prix]" value="${price}" class="form-control form-control-sm w-100" readonly>
+                    <input type="text" style=" font-size: 12px" name="produits[][prix]" value="${price}" class="form-control form-control-sm w-100" readonly>
+                </td>
+                 <td>
+                    <input type="text" style=" font-size: 12px" name="produits[][montant]" value="${montant}" class="form-control form-control-sm w-100" readonly>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-sm btn-danger remove-item">
+                    <button type="button" style=" font-size: 12px" class="btn btn-sm btn-danger remove-item">
                         <i class="fa-solid fa-trash text-white"></i>
                     </button>
                 </td>
@@ -67,35 +75,49 @@ $(document).ready(function () {
         }
     });
 
-  // Supprimer un produit du panier
-    $(document).on('click', '.remove-item', function () {
-        const row = $(this).closest('tr');
-        const productName = row.find('strong').text().trim(); // Nom du produit à récupérer
+});
 
-        // Supprimer la ligne du tableau
-        row.remove();
+ // Supprimer un produit du panier
+$(document).on('click', '.remove-item', function () {
+    const row = $(this).closest('tr');
+    const productName = row.find('strong').text().trim(); // Nom du produit à récupérer
 
-        productCount--; // Décrémenter le compteur de produits
-        $('#cart-badge').text(productCount); // Mettre à jour le badge
+    // Supprimer la ligne du tableau
+    row.remove();
 
-        // Réactiver le bouton du produit
-        $('.add-to-cart').each(function () {
-            const button = $(this);
-            const buttonProductName = button.data('name');
-            if (buttonProductName === productName) {
-                button.prop('disabled', false).text('+ Ajouter à nouveau'); // Réactive le bouton et remet le texte
-            }
-        });
+    productCount--; // Décrémenter le compteur de produits
+    $('#cart-badge').text(productCount); // Mettre à jour le badge
 
-        // Si le panier est vide, réafficher le message
-        if (productCount === 0) {
-            $('#cart-body').append(`
-                <tr id="empty-row">
-                    <td colspan="4" class="text-center text-muted">
-                        Aucun produit ajouté pour l’instant.
-                    </td>
-                </tr>
-            `);
+    // Réactiver le bouton du produit
+    $('.add-to-cart').each(function () {
+        const button = $(this);
+        const buttonProductName = button.data('name');
+        if (buttonProductName === productName) {
+            button.prop('disabled', false).text('+ Ajouter à nouveau'); // Réactive le bouton et remet le texte
         }
     });
+
+    // Si le panier est vide, réafficher le message
+    if (productCount === 0) {
+        $('#cart-body').append(`
+            <tr id="empty-row">
+                <td colspan="4" class="text-center text-muted">
+                    Aucun produit ajouté pour l’instant.
+                </td>
+            </tr>
+        `);
+    }
 });
+
+// Lorsqu'on modifie la quantité
+$(document).on('input', 'input[name="produits[][quantite]"]', function () {
+    const $row = $(this).closest('tr');
+    const quantite = parseInt($(this).val()) || 1;
+
+    const prix = parseInt($row.find('input[name="produits[][prix]"]').first().val());
+    const montant = quantite * prix;
+
+    // Met à jour le champ montant
+    $row.find('input[name="produits[][montant]"]').last().val(montant);
+});
+

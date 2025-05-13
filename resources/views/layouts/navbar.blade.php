@@ -39,7 +39,7 @@
 
 
              {{-- Buttons Connexion  --}}
-             <a class="btn btn-primary fs-6" href="{{ route('login') }}">Connexion</a>
+             {{-- <a class="btn btn-primary fs-6" href="{{ route('login') }}">Connexion</a> --}}
          </div>
          <!-- Panier (badge) -->
          <div class="position-relative px-2" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
@@ -68,18 +68,18 @@
      </div>
      <div class="offcanvas-body">
          <div class=" table-responsive">
-             <table class="table table-striped table-bordered">
+             <table class="table table-striped ">
                  <thead>
                      <tr>
-                         <th class=" bg-secondary-subtle">Produit</th>
-                         <th class=" bg-secondary-subtle">Quantité</th>
-                         <th class=" bg-secondary-subtle">Prix</th>
-                         <th class=" bg-secondary-subtle"></th>
+                         <th class=" bg-secondary-subtle" style=" font-size: 12px">Produit</th>
+                         <th class=" bg-secondary-subtle" style=" font-size: 12px">Quantité</th>
+                         <th class=" bg-secondary-subtle" style=" font-size: 12px">Prix</th>
+                         <th class=" bg-secondary-subtle" style=" font-size: 12px"></th>
                      </tr>
                  </thead>
                  <tbody id="cart-body">
                      <tr id="empty-row">
-                         <td colspan="4" class="text-center text-muted">
+                         <td colspan="4" style=" font-size: 12px" class="text-center text-muted">
                              Aucun produit ajouté pour l’instant.
                          </td>
                      </tr>
