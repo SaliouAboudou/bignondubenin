@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
- {{-- HEADER  --}}
+    {{-- HEADER  --}}
     @include('layouts.header')
 
     <div class="container-fluid custom-bg py-2">
@@ -8,54 +8,16 @@
             <div class="col-1"></div>
             <div class="col-10">
                 <div class="row d-flex flex-wrap">
-                    <div class="col-6 col-md-2 mb-3 ">
-                        <img class="img-fluid rounded" src="{{ asset('images/canape1.webp') }}" alt="Canapé 1">
-                        <div class=" row mt-3">
-                            <h6>Table à Manger</h6>
-                            <p>65 000 FCFA</p>
+                    <div class="col-6 col-md-2 mb-3">
+                        <img class="img-fluid rounded product-img" src="{{ asset('images/canape1.webp') }}" alt="Canapé 1">
+                        <div class="row mt-3">
+                            <h6 class="product-name">Table à Manger</h6>
+                            <p class="product-price">65000</p>
                         </div>
-                        <button class="w-25 btn btn-sm btn-success rounded font-bold">+</button>
+                        <button class="btn btn-sm btn-success add-to-cart" data-name="Table à Manger" data-price="65000"
+                            data-img="{{ asset('images/canape1.webp') }}">+</button>
                     </div>
-                    <div class="col-6 col-md-2  mb-3">
-                        <img class="img-fluid rounded" src="{{ asset('images/canape1.webp') }}" alt="Canapé 1">
-                        <div class=" row mt-3">
-                            <h6>Table à Manger</h6>
-                            <p>65 000 FCFA</p>
-                        </div>
-                        <button class="w-25 btn btn-sm btn-success rounded font-bold">+</button>
-                    </div>
-                    <div class="col-6 col-md-2  mb-3">
-                        <img class="img-fluid rounded" src="{{ asset('images/canape1.webp') }}" alt="Canapé 1">
-                        <div class=" row mt-3">
-                            <h6>Table à Manger</h6>
-                            <p>65 000 FCFA</p>
-                        </div>
-                        <button class="w-25 btn btn-sm btn-success rounded font-bold">+</button>
-                    </div>
-                    <div class="col-6 col-md-2  mb-3">
-                        <img class="img-fluid rounded" src="{{ asset('images/canape1.webp') }}" alt="Canapé 1">
-                        <div class=" row mt-3">
-                            <h6>Table à Manger</h6>
-                            <p>65 000 FCFA</p>
-                        </div>
-                        <button class="w-25 btn btn-sm btn-success rounded font-bold">+</button>
-                    </div>
-                    <div class="col-6 col-md-2  mb-3">
-                        <img class="img-fluid rounded" src="{{ asset('images/canape1.webp') }}" alt="Canapé 1">
-                        <div class=" row mt-3">
-                            <h6>Table à Manger</h6>
-                            <p>65 000 FCFA</p>
-                        </div>
-                        <button class="w-25 btn btn-sm btn-success rounded font-bold">+</button>
-                    </div>
-                    <div class="col-6 col-md-2  mb-3">
-                        <img class="img-fluid rounded" src="{{ asset('images/canape1.webp') }}" alt="Canapé 1">
-                        <div class=" row mt-3">
-                            <h6>Table à Manger</h6>
-                            <p>65 000 FCFA</p>
-                        </div>
-                        <button class="w-25 btn btn-sm btn-success rounded font-bold">+</button>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-1"></div>
@@ -97,7 +59,7 @@
                             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                         <div class="mb-3">
+                        <div class="mb-3">
                             <button class=" btn btn-primary">Envoyer</button>
                         </div>
                     </div>

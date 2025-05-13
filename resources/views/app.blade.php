@@ -32,13 +32,23 @@
 <body>
     {{-- Content   --}}
     @yield('content');
+    
     {{-- Footer  --}}
     @include('layouts.footer')
 
     <!-- bootstrap JS -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- fichier JS externe -->
+    <script src="{{ asset('assets/js/cart.js') }}"></script>
+
+
 </body>
 
 </script>
