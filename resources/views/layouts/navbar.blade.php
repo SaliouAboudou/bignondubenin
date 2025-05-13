@@ -74,6 +74,7 @@
                          <th class=" bg-secondary-subtle" style=" font-size: 12px">Produit</th>
                          <th class=" bg-secondary-subtle" style=" font-size: 12px">Quantité</th>
                          <th class=" bg-secondary-subtle" style=" font-size: 12px">Prix</th>
+                         <th class=" bg-secondary-subtle" style=" font-size: 12px">Montant</th>
                          <th class=" bg-secondary-subtle" style=" font-size: 12px"></th>
                      </tr>
                  </thead>

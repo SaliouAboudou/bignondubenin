@@ -3,6 +3,8 @@
 $(document).ready(function () {
     let productCount = 0;
 
+
+
     // Fonction pour vérifier si le produit existe déjà
     function isProductAlreadyAdded(productName) {
         let isAdded = false;
@@ -22,6 +24,9 @@ $(document).ready(function () {
         const img = $(this).data('img');
         const button = $(this);
         const quantiy = 1
+
+        console.log('cliquez ');
+
 
         const montant = quantiy * price;
 
@@ -75,9 +80,8 @@ $(document).ready(function () {
         }
     });
 
-});
 
- // Supprimer un produit du panier
+     // Supprimer un produit du panier
 $(document).on('click', '.remove-item', function () {
     const row = $(this).closest('tr');
     const productName = row.find('strong').text().trim(); // Nom du produit à récupérer
@@ -108,6 +112,10 @@ $(document).on('click', '.remove-item', function () {
         `);
     }
 });
+
+});
+
+
 
 // Lorsqu'on modifie la quantité
 $(document).on('input', 'input[name="produits[][quantite]"]', function () {
