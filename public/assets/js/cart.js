@@ -105,7 +105,7 @@ $(document).on('click', '.remove-item', function () {
     if (productCount === 0) {
         $('#cart-body').append(`
             <tr id="empty-row">
-                <td colspan="4" class="text-center text-muted">
+                <td colspan="5" class="text-center text-muted">
                     Aucun produit ajouté pour l’instant.
                 </td>
             </tr>

@@ -80,7 +80,7 @@
                  </thead>
                  <tbody id="cart-body">
                      <tr id="empty-row">
-                         <td colspan="4" style=" font-size: 12px" class="text-center text-muted">
+                         <td colspan="5" style=" font-size: 12px" class="text-center text-muted">
                              Aucun produit ajouté pour l’instant.
                          </td>
                      </tr>
